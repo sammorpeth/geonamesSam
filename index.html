@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geonames API Collection</title>
+  <link rel="stylesheet" href="libs/css/style.css">
+
+
+</head>
+<body>
+  <div class="container">
+    <table>
+      <th>API Name</th>
+      <th>API description</th>
+      <th></th>
+      <tr>
+        <td>1. Find nearest Address</td>
+        <td>Returns the nearest address for the given latitude/longitude, the street number is an 'educated guess' 
+          using an interpolation of street number at the end of a street segment.
+          Latitude: <input id="userAddLat" type="number">
+          Langitude: <input id="userAddLng" type="number">
+        
+        </td>
+        <td><button id="sbmtAddress">Submit</button></td>
+      </tr>
+      <tr>
+        <td>2. Find Nearby Postal Codes</td>
+        <td> returns a list of postal codes
+          <br>
+          Post code:<input id="postCode">
+          Country Code: 
+          <select id="selCountry">
+            <option value="CH">CH</option>
+            <option value="GB">GB</option>
+            <option value="FR">FR</option>
+            <option value="DE">DE</option>
+          </select>
+        </td>
+        <td><button id="sbmtPostCode">Submit</button></td>
+      </tr>
+      <tr>
+        <td>3. Find Nearby Wikipedia</td>
+        <td>returns a list of wikipedia entries near to the lat and lang the user enters
+          <br>
+          Latitude: <input id="userWikiLat" type="number">
+          Langitude: <input id="userWikiLng" type="number">
+
+        </td>
+        <td><button id="sbmtWiki">Submit</button></td>
+      </tr>
+    </table>
+    <table>
+      <th>Results for Nearest address</th>
+      <tr>
+        <td align="left">Latitude:</td>
+        <td id="resultsLat"></td>
+      </tr>
+      <tr>
+        <td align="left">Longitude:</td>
+        <td id="resultsLng"></td>
+      </tr>
+      <tr>
+        <td align="left">Name:</td>
+        <td id="resultsName"></td>
+      </tr>
+      <tr>
+        <td align="left">Type of Location:</td>
+        <td id="resultsLocation"></td>
+      </tr>
+      <tr>
+        <td align="left">Country Name:</td>
+        <td id="resultsCountryName"></td>
+      </tr>
+    </table>
+    <table>
+      <th>Results for Nearby Weather</th>
+      <tr>
+        <td align="left">Latitude:</td>
+        <td id="resultsLat"></td>
+      </tr>
+      <tr>
+        <td align="left">Longitude:</td>
+        <td id="resultsLng"></td>
+      </tr>
+      <tr>
+        <td align="left">Name:</td>
+        <td id="resultsName"></td>
+      </tr>
+      <tr>
+        <td align="left">Type of Location:</td>
+        <td id="resultsLocation"></td>
+      </tr>
+      <tr>
+        <td align="left">Country Name:</td>
+        <td id="resultsCountryName"></td>
+      </tr>
+    </table>
+    <table>
+      <th>Results for Nearby Wikipedia</th>
+      <tr>
+        <td align="left">Summary:</td>
+        <td id="resultsSummary"></td>
+      </tr>
+      <tr>
+        <td align="left">Feature:</td>
+        <td id="resultsFeature"></td>
+      </tr>
+      <tr>
+        <td align="left">Latitude:</td>
+        <td id="resultsLat"></td>
+      </tr>
+      <tr>
+        <td align="left">Longitude:</td>
+        <td id="resultsLng"></td>
+      </tr>
+      <tr>
+        <td align="left">Country Code:</td>
+        <td id="resultsCountryCode"></td>
+      </tr>
+    </table>
+  
+  </div> <!-- ./ container -->
+  <script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+	<script type="application/javascript" src="libs/js/script.js"></script>
+</body>
+</html>
