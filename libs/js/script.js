@@ -13,11 +13,11 @@ $('#sbmtAddress').click(function() {
       console.log(result);
 
       if (result.status.name == "ok") {
-        $('#resultsLat').html(result['data'][0]['lat']);
-        $('#resultsLng').html(result['data'][0]['lng']);
-        $('#resultsName').html(result['data'][0]['name']);
-        $('#resultsLocation').html(result['data'][0]['fclName']);
-        $('#resultsCountryName').html(result['data'][0]['countryName']);
+        $('#addressLat').html(result['data'][0]['lat']);
+        $('#addressLng').html(result['data'][0]['lng']);
+        $('#addressName').html(result['data'][0]['name']);
+        $('#addressLocation').html(result['data'][0]['fclName']);
+        $('#addressCountryName').html(result['data'][0]['countryName']);
       }
     
     },
@@ -30,14 +30,13 @@ $('#sbmtAddress').click(function() {
 });
 
 
-$('#sbmtPostCode').click(function() {
+$('#sbmtNeighbour').click(function() {
  
   $.ajax({
-    url: "libs/php/getNearbyWiki.php",
+    url: "libs/php/getCountryNeighbour.php",
     type: 'POST',
     dataType: 'json',
     data: {
-      postcode: $('#postCode').val(),
       countryCode: $('#selCountry').val()
     },
     success: function(result) {
@@ -45,12 +44,11 @@ $('#sbmtPostCode').click(function() {
       console.log(result);
 
       if (result.status.name == "ok") {
-        console.log(result['data'][0]);
-        $('#resultsSummary').html(result['data'][0]['summary']);
-        $('#resultsFeature').html(result['data'][0]['feature']);
-        $('#resultsLat').html(result['data'][0]['lat']);
-        $('#resultsLng').html(result['data'][0]['lng']);
-        $('#resultsCountryCode').html(result['data'][0]['countryCode']);
+        $('#neighbourLat').html(result['data'][0]['lat']);
+        $('#neighbourLng').html(result['data'][0]['lng']);
+        $('#neighbourName').html(result['data'][0]['toponymName']);
+        $('#neighbourCode').html(result['data'][0]['countryCode']);
+       
       
       }
     
@@ -59,6 +57,7 @@ $('#sbmtPostCode').click(function() {
       console.log(textStatus);
       console.log(errorThrown);
       console.log(jqXHR);
+      
     }
   }); 
 });
@@ -79,11 +78,11 @@ $('#sbmtWiki').click(function() {
       console.log(result);
 
       if (result.status.name == "ok") {
-        $('#resultsSummary').html(result['data'][0]['summary']);
-        $('#resultsFeature').html(result['data'][0]['feature']);
-        $('#resultsLat').html(result['data'][0]['lat']);
-        $('#resultsLng').html(result['data'][0]['lng']);
-        $('#resultsCountryCode').html(result['data'][0]['countryCode']);
+        $('#wikiSummary').html(result['data'][0]['summary']);
+        $('#wikiFeature').html(result['data'][0]['feature']);
+        $('#wikiLat').html(result['data'][0]['lat']);
+        $('#wikiLng').html(result['data'][0]['lng']);
+        $('#wikiCountryCode').html(result['data'][0]['countryCode']);
       
       }
     

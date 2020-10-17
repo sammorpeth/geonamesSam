@@ -16,8 +16,7 @@
       <th></th>
       <tr>
         <td>1. Find nearest Address</td>
-        <td>Returns the nearest address for the given latitude/longitude, the street number is an 'educated guess' 
-          using an interpolation of street number at the end of a street segment.
+        <td>Returns the nearest address for the given latitude/longitude.
           Latitude: <input id="userAddLat" type="number">
           Langitude: <input id="userAddLng" type="number">
         
@@ -25,10 +24,9 @@
         <td><button id="sbmtAddress">Submit</button></td>
       </tr>
       <tr>
-        <td>2. Find Nearby Postal Codes</td>
-        <td> returns a list of postal codes
+        <td>2. Find Countries' Neighbours</td>
+        <td> Returns information about a neighbouring country of the country the user selects.
           <br>
-          Post code:<input id="postCode">
           Country Code: 
           <select id="selCountry">
             <option value="CH">CH</option>
@@ -37,11 +35,11 @@
             <option value="DE">DE</option>
           </select>
         </td>
-        <td><button id="sbmtPostCode">Submit</button></td>
+        <td><button id="sbmtNeighbour">Submit</button></td>
       </tr>
       <tr>
         <td>3. Find Nearby Wikipedia</td>
-        <td>returns a list of wikipedia entries near to the lat and lang the user enters
+        <td>Returns a wikipedia entry which is near to the lat and lang the user enters.
           <br>
           Latitude: <input id="userWikiLat" type="number">
           Langitude: <input id="userWikiLng" type="number">
@@ -54,69 +52,66 @@
       <th>Results for Nearest address</th>
       <tr>
         <td align="left">Latitude:</td>
-        <td id="resultsLat"></td>
+        <td id="addressLat"></td>
       </tr>
       <tr>
         <td align="left">Longitude:</td>
-        <td id="resultsLng"></td>
+        <td id="addressLng"></td>
       </tr>
       <tr>
         <td align="left">Name:</td>
-        <td id="resultsName"></td>
+        <td id="addressName"></td>
       </tr>
       <tr>
         <td align="left">Type of Location:</td>
-        <td id="resultsLocation"></td>
+        <td id="addressLocation"></td>
       </tr>
       <tr>
         <td align="left">Country Name:</td>
-        <td id="resultsCountryName"></td>
+        <td id="addressCountryName"></td>
       </tr>
     </table>
     <table>
-      <th>Results for Nearby Weather</th>
+      <th>Results for Countries' Neighbours</th>
       <tr>
         <td align="left">Latitude:</td>
-        <td id="resultsLat"></td>
+        <td id="neighbourLat"></td>
       </tr>
       <tr>
         <td align="left">Longitude:</td>
-        <td id="resultsLng"></td>
+        <td id="neighbourLng"></td>
       </tr>
       <tr>
         <td align="left">Name:</td>
-        <td id="resultsName"></td>
+        <td id="neighbourName"></td>
       </tr>
       <tr>
-        <td align="left">Type of Location:</td>
-        <td id="resultsLocation"></td>
+        <td align="left">Country Code:</td>
+        <td id="neighbourCode"></td>
       </tr>
-      <tr>
-        <td align="left">Country Name:</td>
-        <td id="resultsCountryName"></td>
-      </tr>
+   
     </table>
     <table>
       <th>Results for Nearby Wikipedia</th>
       <tr>
         <td align="left">Summary:</td>
-        <td id="resultsSummary"></td>
+        <td id="wikiSummary"></td>
       </tr>
       <tr>
         <td align="left">Feature:</td>
-        <td id="resultsFeature"></td>
+        <td id="wikiFeature"></td>
       </tr>
       <tr>
         <td align="left">Latitude:</td>
-        <td id="resultsLat"></td>
+        <td id="wikiLat"></td>
       </tr>
       <tr>
         <td align="left">Longitude:</td>
-        <td id="resultsLng"></td>
+        <td id="wikiLng"></td>
       </tr>
       <tr>
         <td align="left">Country Code:</td>
-        <td id="resultsCountryCode"></td>
+        <td id="wikiCountryCode"></td>
       </tr>
     </table>
   

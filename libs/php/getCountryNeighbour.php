@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-  $url='http://api.geonames.org/findNearbyPostalCodesJSON?postalcode=' . $_REQUEST['postcode']. '&country=' . $_REQUEST['countryCode'] . '&radius=10&username=sammorpeth';
+  $url='http://api.geonames.org/neighboursJSON?country=' . $_REQUEST['countryCode']. '&username=sammorpeth';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
